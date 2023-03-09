@@ -83,7 +83,7 @@ exports.addUser = addUser;
  * @param {string} guest_id The id of the user.
  * @return {Promise<[{}]>} A promise to the reservations.
  */
-const getAllReservations = (guest_id, limit = 1) => {
+const getAllReservations = (guest_id, limit = 10) => {
   const userValues = [guest_id, limit];
   return pool
     .query(`
